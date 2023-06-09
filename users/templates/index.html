@@ -1,0 +1,21 @@
+
+{% extends 'master.html' %}
+
+{% block title %}
+    Users list
+{% endblock %}
+
+{% block content %}
+
+    <ul>
+        {% for x in users %}
+            <li>
+                <a href="details/{{x.id}}">
+                    {{ x.first_name }} {{x.last_name}}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock content %}
+
